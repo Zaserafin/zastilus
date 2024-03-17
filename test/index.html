@@ -1,13 +1,54 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zastilus</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zastirus</title>
 
-    <link rel="stylesheet" href="/zastilus.css">
-</head>
-<body>
-    <h1>Saraza</h1>
-</body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+
+    <link rel="stylesheet" href="/zastilus.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Typography</h1>
+      <hr />
+      <h1>h1. Heading</h1>
+      <h2>h2. Heading</h2>
+      <h3>h3. Heading</h3>
+      <h4>h4. Heading</h4>
+      <h5>h5. Heading</h5>
+      <h6>h6. Heading</h6>
+
+      <h1>Buttons</h1>
+      <hr />
+      <button>Example button</button>
+      <button class="outline">Example button</button>
+      <button disabled>Example button</button>
+
+      <h1>Forms</h1>
+      <hr />
+      <form action="javascript: void(0)">
+        <fieldset>
+          <label for="nameField">Nombre</label>
+          <input id="nameField" type="text" placeholder="Escribe tú nombre" />
+
+          <label for="lastNameField">Apellido</label>
+          <input id="lastNameField" type="text" placeholder="Escribe tú apellido" />
+
+          <label for="ageField">Edad</label>
+          <input id="ageField" type="number" placeholder="Ingrese su edad" />
+
+          <div style="float: right">
+            <input id="workerField" type="checkbox" />
+            <label class="inline" for="workerField">Usted tiene trabajo?</label>
+          </div>
+
+          <input class="button" type="submit" value="Enviar" />
+        </fieldset>
+      </form>
+      <hr />
+      <img src="https://fastly.picsum.photos/id/862/1920/1080.jpg?hmac=syVnXh-ScnI1Rhv0ilwC04l0_EGUn4X8MIrnVr2rcro" />
+    </div>
+  </body>
 </html>

@@ -1,0 +1,29 @@
+// Lighten a color: mix a color with white
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+// Darken a color: mix a color with black
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}
+
+// Get the contrast color of a color
+@function color-contrast($color) {
+  // Get the RGB color components of the background color
+  $r: calc(red($color) / 255);
+  $g: calc(green($color) / 255);
+  $b: calc(blue($color) / 255);
+
+  // Calculate the contrast between the background color and black and white
+  $luminance: 0.2126 * $r + 0.7152 * $g + 0.0722 * $b;
+  $contrast-white: abs($luminance - 1);
+  $contrast-black: $luminance;
+
+  // Return text color based on contrast
+  @if $contrast-white >= $contrast-black {
+    @return $white;
+  } @else {
+    @return $black;
+  }
+}

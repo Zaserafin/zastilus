@@ -1,3 +1,7 @@
-*{
-    background-color: rgb(185, 212, 181);
-}
+// Import global vars, functions and mixins
+@import "./global/variables", "./global/functions", "./global/mixins";
+
+// Imports all the style modules
+// =================================================
+
+@import "./base";

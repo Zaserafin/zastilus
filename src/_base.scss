@@ -1,0 +1,32 @@
+// Base styling
+// =================================================
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+
+  scrollbar-width: #{$scrollbar-size};
+  scrollbar-color: #{$scrollbar-thumb-color}  #{$scrollbar-bg-color};
+}
+
+html {
+  box-sizing: border-box;
+  font-size: #{$font-size-root};
+}
+
+body {
+  color:            #{$text-color};
+  background-color: #{$bg-color};
+  font-family:      #{$font-family-text};
+  font-size:        #{$font-size-base};
+  font-weight:      #{$font-weight-base};
+  letter-spacing:   #{$letter-spacing-base};
+  line-height:      #{$line-height-base};
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}

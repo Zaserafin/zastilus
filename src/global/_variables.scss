@@ -1,0 +1,75 @@
+$prefix: zas;
+
+// Fonts and sizes
+// =================================================
+
+// 10px in root means 1rem = 10px
+$font-size-root: 10px;
+$font-size-base: 1.6rem;
+
+// prettier-ignore
+$font-family-text: system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-code: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-weight-base:      300;
+$letter-spacing-base:   0.01rem;
+$line-height-base:      1.5;
+
+$heading-font-weight:     400;
+$heading-letter-spacing:  -0.1rem;
+$heading-margin-bottom:   2rem;
+$heading-margin-top:      0;
+$heading-line-height:     1.6;
+
+$heading-sizes: (
+  1: 4.6rem,
+  2: 3.6rem,
+  3: 2.8rem,
+  4: 2.2rem,
+  5: 1.8rem,
+  6: 1.6rem,
+);
+
+// Colors
+// ================================================= 
+
+$primary:   #7cc919;
+$secondary: #6c757d;
+$tertiary:  #ffc107;
+$warning:   #ffc107;
+$danger:    #dc3545; 
+$info:      #17a2b8;
+$success:   #28a745;
+$dark:      #1f1f1f;
+$light:     #f1f1f1;
+
+$colors: (
+  primary:    $primary,
+  secondary:  $secondary,
+  tertiary:   $tertiary,
+  warning:    $warning,
+  danger:     $danger,
+  info:       $info,
+  success:    $success,
+  dark:       $dark,
+  light:      $light,
+);
+
+$text-color:  $dark !default;
+$bg-color:    $light !default;
+
+// Borders and outlines
+// =================================================
+
+$border-radius: 0.4rem;
+$border-width:  0.2rem;
+$border-color: transparent;
+
+$outline-color: transparent;
+  
+// Scrollbar styling
+// =================================================
+
+$scrollbar-size: thin;
+$scrollbar-thumb-color: $dark;
+$scrollbar-bg-color: $light;
