@@ -1,0 +1,27 @@
+// generic extensible title
+%default-heading {
+  display: block;
+  font-weight: #{$heading-font-weight};
+  letter-spacing: #{$heading-letter-spacing};
+  margin-bottom: #{$heading-margin-bottom};
+  margin-top: #{$heading-margin-top};
+  line-height: #{$heading-line-height};
+}
+
+// Main titles styles
+@each $size, $value in $heading-sizes {
+  h#{$size},
+  .h#{$size} {
+    @extend %default-heading;
+    font-size: #{$value} !important;
+  }
+}
+
+// Display's titles styles
+@each $size, $value in $display-sizes {
+  .display-#{$size} {
+    @extend %default-heading;
+    font-weight: #{$display-font-weight};
+    font-size: #{$value} !important;
+  }
+}
