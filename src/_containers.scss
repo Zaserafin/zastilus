@@ -1,0 +1,26 @@
+// Container
+// =================================================
+
+@mixin default-container {
+  --#{$prefix}-gutter-x: #{calc($container-padding-x * 0.5)};
+  --#{$prefix}-gutter-y: #{calc($container-padding-y * 0.5)};
+
+  width: 100%;
+  max-width: 100%;
+  padding: var(--#{$prefix}-gutter-y) var(--#{$prefix}-gutter-x);
+  margin: 0 auto;
+}
+
+.fluid-container,
+.container {
+  @include default-container();
+}
+
+// Genera los anchos máximos para el container
+.container {
+  @each $breakpoint, $container-max-width in $container-sizes {
+    @media (min-width: #{$container-max-width}) {
+      max-width: $container-max-width;
+    }
+  }
+}
