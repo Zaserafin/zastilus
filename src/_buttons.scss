@@ -1,0 +1,82 @@
+// Button
+// =================================================
+
+@mixin button-color($color) {
+  $hover-color: tint-color($color, 30%);
+
+  --#{$prefix}-button-bg: #{$color};
+  --#{$prefix}-button-color: #{color-contrast($color)};
+
+  --#{$prefix}-button-hover-bg: #{$hover-color};
+  --#{$prefix}-button-hover-color: #{color-contrast($hover-color)};
+}
+
+@mixin button-size($size) {
+  padding: map-get(map-get($button-sizes, $size), padding);
+  font-size: map-get(map-get($button-sizes, $size), font-size);
+}
+
+.button,
+button {
+  @include button-color($primary);
+
+  cursor: pointer;
+  background-color: var(--#{$prefix}-button-bg);
+  border: 0.2rem solid transparent;
+  border-radius: 0.4rem;
+  outline: transparent;
+
+  margin: 0.4rem 0.2rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  display: inline-block;
+  color: var(--#{$prefix}-button-color);
+
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+  transition-property: color, border-color, background-color;
+
+  &:first-child {
+    margin-left: 0px !important;
+  }
+
+  &:last-child {
+    margin-right: 0px !important;
+  }
+
+  &.outline {
+    background-color: transparent;
+    border-color: var(--#{$prefix}-button-bg);
+    color: var(--#{$prefix}-button-bg);
+
+    &:hover {
+      background-color: var(--#{$prefix}-button-bg);
+      color: var(--#{$prefix}-button-color);
+    }
+  }
+
+  &:hover {
+    background-color: var(--#{$prefix}-button-hover-bg);
+    color: var(--#{$prefix}-button-hover-color);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: lightgray;
+    color: grey;
+  }
+
+  @each $name, $color in $colors {
+    &.button-#{$name} {
+      @include button-color($color);
+    }
+  }
+
+  @each $size, $properties in $button-sizes {
+    &.button-#{$size} {
+      @include button-size($size);
+    }
+  }
+}

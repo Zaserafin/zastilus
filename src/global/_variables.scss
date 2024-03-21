@@ -11,17 +11,17 @@ $font-size-base: 1.6rem;
 $font-family-text: system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-code: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
 
-$font-weight-base:      300;
-$letter-spacing-base:   0.01rem;
-$line-height-base:      1.5;
+$font-weight-base: 300;
+$letter-spacing-base: 0.01rem;
+$line-height-base: 1.5;
 
-$heading-font-weight:     400;
-$heading-letter-spacing:  -0.1rem;
-$heading-margin-bottom:   2rem;
-$heading-margin-top:      0;
-$heading-line-height:     1.6;
+$heading-font-weight: 400;
+$heading-letter-spacing: -0.1rem;
+$heading-margin-bottom: 2rem;
+$heading-margin-top: 0;
+$heading-line-height: 1.6;
 
-$display-font-weight: 300; 
+$display-font-weight: 300;
 
 $heading-sizes: (
   1: 4.6rem,
@@ -38,46 +38,48 @@ $display-sizes: (
   3: 6.4rem,
   4: 5.6rem,
   5: 4.8rem,
-  6: 4rem
+  6: 4rem,
 );
 
 // Colors
-// ================================================= 
+// =================================================
 
-$primary:   #7cc919;
+$primary: #19c985;
 $secondary: #6c757d;
-$tertiary:  #ffc107;
-$warning:   #ffc107;
-$danger:    #dc3545; 
-$info:      #17a2b8;
-$success:   #28a745;
-$dark:      #1f1f1f;
-$light:     #f1f1f1;
+$tertiary: #ffc107;
+$quaternary: #17a2b8;
+$warning: #dc3545;
+$danger: #ff0000;
+$success: #28a745;
+$dark: #343a40;
+$light: #f8f9fa;
+$black: #1f1f1f;
+$white: #f1f1f1;
 
 $colors: (
-  primary:    $primary,
-  secondary:  $secondary,
-  tertiary:   $tertiary,
-  warning:    $warning,
-  danger:     $danger,
-  info:       $info,
-  success:    $success,
-  dark:       $dark,
-  light:      $light,
+  primary: $primary,
+  secondary: $secondary,
+  tertiary: $tertiary,
+  quaternary: $quaternary,
+  warning: $warning,
+  danger: $danger,
+  success: $success,
+  dark: $dark,
+  light: $light,
 );
 
-$text-color:  $dark !default;
-$bg-color:    $light !default;
+$text-color: $dark !default;
+$bg-color: $light !default;
 
 // Borders and outlines
 // =================================================
 
 $border-radius: 0.4rem;
-$border-width:  0.2rem;
+$border-width: 0.2rem;
 $border-color: transparent;
 
 $outline-color: transparent;
-  
+
 // Scrollbar styling
 // =================================================
 
@@ -98,3 +100,38 @@ $container-sizes: (
   xl: 1140px,
   xxl: 1320px,
 ) !default;
+
+// Buttons Variables
+// =================================================
+
+// Button sizes
+$button-sizes: (
+  xxs: (
+    padding: 0.5rem 1rem,
+    font-size: 1.2rem,
+  ),
+  xs: (
+    padding: 0.6rem 1.2rem,
+    font-size: 1.4rem,
+  ),
+  sm: (
+    padding: 1rem 1.4rem,
+    font-size: 1.6rem,
+  ),
+  md: (
+    padding: 1.2rem 1.6rem,
+    font-size: 1.8rem,
+  ),
+  lg: (
+    padding: 1.4rem 1.8rem,
+    font-size: 2rem,
+  ),
+  xl: (
+    padding: 1.6rem 2rem,
+    font-size: 2.2rem,
+  ),
+  xxl: (
+    padding: 1.8rem 2.2rem,
+    font-size: 2.4rem,
+  ),
+);
