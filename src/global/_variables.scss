@@ -135,3 +135,44 @@ $button-sizes: (
     font-size: 2.4rem,
   ),
 );
+
+// Forms
+// =================================================
+
+// Input
+$input-bg: transparent;
+$input-color: $text-color;
+$input-border-width: 0.2rem;
+$input-border-color: $secondary;
+$input-border-radius: $border-radius;
+$input-height: 3.8rem;
+$input-width: 100%;
+$input-padding: 0.6rem 1rem 0.7rem;
+$input-margin: 0 0 1.5rem 0;
+
+$input-focus-border-color: $primary;
+
+// Color Input
+$color-height: $input-height;
+$color-width: 4.6rem;
+$color-padding: 0.3rem;
+
+// Select
+$select-padding-right: 3rem;
+$select-indicator-color: $dark;
+$select-indicator: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path d="M0,0l6,8l6-8" fill="%234d4d4d"/></svg>');
+
+// Textarea
+$textarea-min-height: 6.5rem;
+$textarea-max-height: 16rem;
+$textarea-resize: vertical;
+
+// Label
+$label-font-size: 1.6rem;
+$label-font-weight: 700;
+$label-margin: 0.6rem;
+
+// Fieldset
+$fieldset-border-width: 0;
+$fieldset-padding: 0;
+$fieldset-margin: 0;
