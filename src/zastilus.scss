@@ -1,5 +1,5 @@
 // Import global vars, functions and mixins
-@import "./global/variables", "./global/functions", "./global/mixins";
+@import "./global/variables", "./global/functions", "./global/mixins", "./global/animations";
 
 // Imports all the style modules
 // =================================================
@@ -15,3 +15,5 @@
 @import "./forms";
 
 @import "./tables";
+
+@import "./loaders";

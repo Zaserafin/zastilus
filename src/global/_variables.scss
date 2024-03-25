@@ -1,4 +1,8 @@
+// Miscellaneous
+// =================================================
 $prefix: zas;
+
+$border-radius-infinite: 9999px;
 
 // Fonts and sizes
 // =================================================
@@ -181,10 +185,24 @@ $fieldset-margin: 0;
 // =================================================
 $table-margin: 2rem;
 
-$table-header-bg: #d6ebd7; 
+$table-header-bg: #d6ebd7;
 
 $table-cell-padding: 1rem;
 
 $table-row-border-width: 0.2rem;
-$table-row-border-color: rgba(111, 124, 112, 0.3); 
-$table-row-border-style: solid; 
+$table-row-border-color: rgba(111, 124, 112, 0.3);
+$table-row-border-style: solid;
+
+// Loaders
+// =================================================
+
+$loader-default-size: 4rem;
+$loader-default-width: 0.6rem;
+$loader-default-color: $quaternary;
+
+$loader-speeds: (
+  extra-slow: 1s,
+  slow: 0.75s,
+  medium: 0.5s,
+  fast: 0.2s,
+);

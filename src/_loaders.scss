@@ -1,0 +1,22 @@
+.loader {
+  display: inline-block;
+  width: var(--#{$prefix}-loader-size, #{$loader-default-size});
+  height: var(--#{$prefix}-loader-size, #{$loader-default-size});
+  border: var(--#{$prefix}-loader-width, #{$loader-default-width}) solid
+    var(--#{$prefix}-loader-color, #{$loader-default-color});
+  border-left-color: transparent;
+  border-radius: #{$border-radius-infinite};
+  animation: rotate 0.75s linear infinite;
+
+  @each $name, $value in $colors {
+    &.#{$name} {
+      --#{$prefix}-loader-color: #{$value};
+    }
+  }
+
+  @each $name, $value in $loader-speeds {
+    &.#{$name} {
+      animation-duration: #{$value};
+    }
+  }
+}
