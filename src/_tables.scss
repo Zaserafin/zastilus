@@ -1,0 +1,49 @@
+.table-container {
+  display: block;
+  width: 100%;
+
+  overflow-y: visible;
+  overflow-x: auto;
+}
+
+table,
+.table {
+  vertical-align: top;
+  width: 100%;
+  text-align: left;
+  margin: #{$table-margin} 0;
+
+  // Absolutely all elements within the table
+  * {
+    text-align: inherit;
+  }
+
+  // This selector allows you to give styles to each column within the rows, leaving aside the captions.
+  & > :not(caption) > * > * {
+    padding: #{$table-cell-padding};
+    box-shadow: none;
+  }
+
+  // Allows you to estimate the headers content
+  & > thead,
+  & > .thead {
+    vertical-align: bottom;
+    background-color: #{$table-header-bg};
+  }
+
+  // Allows you to estimate the body content
+  & > tbody,
+  & > .tbody {
+    vertical-align: bottom;
+
+    tr {
+      border-bottom-style: #{$table-row-border-style};
+      border-bottom-width: #{$table-row-border-width};
+      border-bottom-color: #{$table-row-border-color};
+
+      &:last-child{
+        border: none !important;
+      }
+    }
+  }
+}
