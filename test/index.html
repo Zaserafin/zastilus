@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
 
     <link rel="stylesheet" href="/zastilus.css" />
+
+    <style>
+      .example-column {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        background-color: rgba(58, 87, 44, 0.764);
+        border: 1px solid rgba(45, 107, 26, 0.528);
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <main class="container">
@@ -15,10 +25,8 @@
         <h3>Title:</h3>
         <hr />
         <section>
-          <h5>Headings:</h5> 
+          <h5>Headings:</h5>
           <h1>h1. Heading</h1>
-          <h2>h2. Heading</h2>
-          <h3>h3. Heading</h3>
           <h2>h2. Heading</h2>
           <h3>h3. Heading</h3>
           <h4>h4. Heading</h4>
@@ -82,6 +90,7 @@
           </p>
         </section>
       </article>
+
       <article>
         <h3>Forms</h3>
         <hr />
@@ -181,8 +190,22 @@
         </section>
       </article>
 
+      <article>
+        <h3>Grid System</h3>
+        <hr />
+
+        <section class="grid">
+          <span class="example-column column-4">Column</span>
+          <span class="example-column column-4">Column</span>
+          <span class="example-column column-4">Column</span>
+        </section>
+      </article>
+
       <hr />
-      <img alt="example image" src="https://fastly.picsum.photos/id/862/1920/1080.jpg?hmac=syVnXh-ScnI1Rhv0ilwC04l0_EGUn4X8MIrnVr2rcro" />
+      <img
+        alt="example image"
+        src="https://fastly.picsum.photos/id/862/1920/1080.jpg?hmac=syVnXh-ScnI1Rhv0ilwC04l0_EGUn4X8MIrnVr2rcro"
+      />
     </main>
   </body>
 </html>

@@ -27,3 +27,22 @@
     @return $black;
   }
 }
+
+// Devuelve el valor del breakpoint correspondiente o nulo si es el menor
+@function get_breakpoint_min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @if type-of($min) != "number" {
+    @warn "Breakpoint '#{$name}' not found in provided breakpoints map.";
+    @return null;
+  }
+  @return if($min != 0, $min, null);
+}
+
+// Devuelve el nombre del breakpoint o nulo si es el menor
+@function get_breakpoint_suffix($name, $breakpoints) {
+  @return if(get_breakpoint_min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+@function calculate-column-width($column) {
+  @return percentage(calc($column / $grid-total-columns));
+}

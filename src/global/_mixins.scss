@@ -1,0 +1,12 @@
+// Permite colocar el contenido dentro de un media query
+// O en caso de ser el mínimo breakpoint se coloca en el selector raíz
+@mixin responsive-content($name, $breakpoints: $grid-breakpoints) {
+  $min: get_breakpoint_min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
