@@ -1,17 +1,18 @@
-.row {
-  --#{$prefix}-rows: #{$grid-rows};
-  --#{$prefix}-columns: #{$grid-columns};
+.row {  
   --#{$prefix}-gutter: #{$grid-gutter};
   --#{$prefix}-gutter-y: #{calc($grid-gutter * 0.5)};
   --#{$prefix}-gutter-x: 0;
 
-  display: grid;
-  grid-template-rows: repeat(var(--#{$prefix}-rows, #{$grid-rows}), 1fr);
-  grid-template-columns: repeat(var(--#{$prefix}-columns, #{$grid-columns}), 1fr);
+  display: flex;
+  flex-wrap: wrap;
   margin: var(--#{$prefix}-gutter-y) var(--#{$prefix}-gutter-x);
 
   & > * {
     padding-inline: calc(var(--#{$prefix}-gutter, #{$grid-gutter}) * 0.5);
+    flex: 1 0 0%;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -20,7 +21,8 @@
     @include responsive-content($breakpoint, $grid-breakpoints) {
       @for $i from 1 through $grid-columns {
         .column#{$breakpoint-suffix}-#{$i} {
-          grid-column: auto / span $i;
+          flex: 0 0 auto;
+          width: #{percentage(calc($i / $grid-columns))};
         }
       }
     }
