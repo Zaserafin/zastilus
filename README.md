@@ -5,4 +5,4 @@
 > This project uses [normalize.css](https://necolas.github.io/normalize.css/) as a starting point
 
 > [!WARNING]  
-> This projects has moved to [Echo CSS](https://github.com/Zaserafin/echocss)
+> This projects has moved to [Simplicity CSS](https://github.com/Zaserafin/simplicity)
